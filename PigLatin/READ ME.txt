@@ -1,0 +1,53 @@
+B.
+(don't say that is question 13, because I kinda answered stuff that we do later in the epub haha )
+
+	13 a supposed to translate english -> piglatin and have the TTS to speech it
+	   b button gets the text, sends it to the PigLatinTranslator class trough the translate function. calls setEnglish, which calls translate, which tests if it's an empty string or not (if empty, return the initial text (which is nothing) otherwise post what trasnalteWord returns). It tests firstly for the voyels and applies the way thing, otherwise do the inversions and apply the ay
+	   d make the video of it working
+	
+	16 empty string -> return empty string   |  punctuations is used as if it was a character in the word (not sure if that's how piglating works thouhg)
+
+	22 crashing of the app, made it work on a virtualized one and on our phones, bugs were for where the code checks for the placement of the letters and reorders them. found the errors by debugging. 
+C.
+	1 changed button colors
+	2 wasn't working because the button didn't execute anything, I added the clearButton(View view) function in the Activity with code : 
+
+public void clearButton(View view){
+        String blank = "";
+        EditText editText = (EditText) findViewById(R.id.inputText);
+        editText.setText(blank);
+        TextView converted = (TextView) findViewById(R.id.convertedText);
+        converted.setText(blank);
+    }
+
+	4 to keep the state I used 
+
+THIS SAVES HOW THE APP IS CURRENTLY
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        EditText input = (EditText) findViewById(R.id.inputText);
+        outState.putString("inField", input.getText().toString());
+        TextView convTxt = (TextView) findViewById(R.id.convertedText);
+        outState.putString("converted", convTxt.getText().toString());
+    }
+
+THIS APP RESTORES HOW IT WAS WHEN IT WAS CLOSED BEFORE
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        EditText input = (EditText) findViewById(R.id.inputText);
+        TextView conv = (TextView) findViewById(R.id.convertedText);
+        input.setText(savedInstanceState.getString("inField"));
+        conv.setText(savedInstanceState.getString("converted"));
+    }
+
+film the end result
+post everything by friday night
+
+my infos
+
+Gaspard Witrand
+Student id : 214506018

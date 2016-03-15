@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sandbox1</string>
+    <string name="input1_prompt">Input #1:</string>
+    <string name="input2_prompt">Input #2:</string>
+    <string name="output1_prompt">Output #1:</string>
+    <string name="output2_prompt">Output #2:</string>
+    <string name="action_settings">Settings</string>
+</resources>

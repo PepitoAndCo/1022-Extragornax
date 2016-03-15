@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sandbox0</string>
+    <string name="input1_prompt">Quantity:</string>
+    <string name="input2_prompt">Unit Price:</string>
+    <string name="output1_prompt">Total (with HST included):</string>
+    <string name="action_settings">Settings</string>
+</resources>

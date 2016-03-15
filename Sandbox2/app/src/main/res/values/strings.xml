@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sandbox2</string>
+    <string name="input1_prompt">Principle Amount:</string>
+    <string name="input2_prompt">Interest Rate:</string>
+    <string name="output1_prompt">Monthly Payment:</string>
+    <string name="output2_prompt">Output #2:</string>
+    <string name="action_settings">Settings</string>
+</resources>
