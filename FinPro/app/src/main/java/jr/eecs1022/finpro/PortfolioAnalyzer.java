@@ -21,6 +21,7 @@ public class PortfolioAnalyzer
     private List<Equity> portfolio;
     public static final long MS_PER_DAY = 24L * 3600 * 1000;
     public static final int DAY_PER_YEAR = 365;
+    long nombreinvestementnul = 0;
 
     public PortfolioAnalyzer(String title, String[] rows)
     {
@@ -60,12 +61,22 @@ public class PortfolioAnalyzer
 
     public String toString()
     {
+/*
         return "The " + this.title + " portfolio consists of " +
                 this.getPortfolioSize() + " equities. \n" +
                 "It has a market value of " +
                 String.format("$%,.2f", this.getPortfolioMarketValue()) +
                 " and a yield of " +
                 String.format("%,.1f%% (annualized).", 100 * this.getPortfolioYield());
+
+*/
+
+
+        return "Thi portfolio : \n" +
+                "- Is worth about: " + String.format("$%,.2f", this.getPortfolioMarketValue()) +
+                "\n - And has " + nombreinvestementnul + " bad investements.";
+
+
     }
 
     private double getInvestmentMarketValue(String symbol)
@@ -81,7 +92,12 @@ public class PortfolioAnalyzer
         Date today = new Date();
         double diff = TimeUnit.DAYS.convert(today.getTime() - acquired.getTime(), TimeUnit.MILLISECONDS);
         double investYield = ((marketValue-bookValue)/bookValue) * (DAY_PER_YEAR / diff);
+        System.out.println(investYield);
+        if(investYield < 0){
+            nombreinvestementnul = nombreinvestementnul +1;
+        }
         return investYield;
+
     }
 
     public double getPortfolioMarketValue()

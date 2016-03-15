@@ -1,6 +1,7 @@
 package jr.eecs1022.finpro;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -69,7 +70,14 @@ public class UI extends AppCompatActivity
         ((TextView) row.findViewById(R.id.bookValue)).setText(String.format("%.2f", equity.getBookValue()));
         ((TextView) row.findViewById(R.id.date)).setText(String.format("%td/%<tm/%<tY", equity.getAcquired()));
         ((TextView) row.findViewById(R.id.marketValue)).setText(String.format("%.2f", equity.getMarketValue()));
-        ((TextView) row.findViewById(R.id.yield)).setText(String.format("%.1f%%", 100 * equity.getYield()));
+
+        if(equity.getYield() < 0) {
+            ((TextView) row.findViewById(R.id.yield)).setText(String.format("%.1f%%", 100 * equity.getYield()));
+            ((TextView) row.findViewById(R.id.yield)).setTextColor(Color.RED);
+        } else {
+            ((TextView) row.findViewById(R.id.yield)).setText(String.format("%.1f%%", 100 * equity.getYield()));
+        }
+
         this.table.addView(row);
         this.table.requestLayout();
     }
