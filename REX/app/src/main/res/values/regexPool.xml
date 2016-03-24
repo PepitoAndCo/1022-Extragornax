@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pool">
+        <item>([A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9])</item>
+        <item>([A-VXYa-vxy][0-9][A-Za-z] *[0-9][A-Za-z][0-9])</item>
+        <item>^(\\+\\d{1,2}\\s)?(\\(?\\d{3}\\)?)[\\s.-](\\d{3})[\\s.-](\\d{4})$</item>
+        <item>([+-]?[0-9]+),([+-]?[0-9]+)\'([+-]?[0-9]+)</item>
+        <item>(http|ftp)://([^/]+)(/.*)?</item>
+    </string-array>
+</resources>

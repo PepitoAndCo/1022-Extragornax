@@ -1,5 +1,8 @@
 package jba.roumani.sandbox1;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * A plain Java class not tied to the Android context.
  *
@@ -151,6 +154,7 @@ public class ComputeEngine
 
     public void exploreChars()
     {
+        TestingFunction();
         System.out.println("-------------------------- Char Games:");
 
         char x = 'B';
@@ -201,6 +205,19 @@ public class ComputeEngine
         //engine.exploreReals(5.0, 2.5);
         engine.exploreChars();
         //engine.exploreBooleans();
+    }
+
+    public void TestingFunction(){
+        System.out.println(" ");
+        System.out.println("=========================================");
+        System.out.println("TESTING SECTION");
+        System.out.println("=========================================");
+
+
+
+
+        System.out.println("=========================================");
+        System.out.println(" ");
     }
 
 }

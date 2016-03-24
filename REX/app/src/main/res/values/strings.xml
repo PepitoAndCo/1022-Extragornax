@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">REX</string>
+    <string name="input1_prompt">String</string>
+    <string name="input2_prompt">Regex</string>
+    <string name="output1_prompt">Result</string>
+    <string name="output2_prompt">Output #2:</string>
+    <string name="action_settings">Settings</string>
+</resources>

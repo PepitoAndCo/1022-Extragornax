@@ -1,0 +1,76 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:text="@string/input2_prompt"
+        android:textStyle="italic"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/regex"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:focusableInTouchMode="false"
+        android:textStyle="italic"
+        android:textSize="24dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:text="@string/input1_prompt"
+        android:textStyle="italic"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        android:editable="false"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/compute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANALYZE"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/result"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24dp"
+            android:textColor="#000099"
+            android:textStyle="bold|italic"/>
+    </ScrollView>
+
+
+
+</LinearLayout>

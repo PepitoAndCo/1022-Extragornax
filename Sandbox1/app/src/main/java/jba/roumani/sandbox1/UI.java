@@ -53,8 +53,9 @@ public class UI extends AppCompatActivity implements View.OnClickListener
         String in2 = ((EditText) findViewById(R.id.input2)).getText().toString();
         ComputeEngine engine = new ComputeEngine();
         System.out.println("About to invoke the engine ...");
-        double result = engine.compute(Integer.parseInt(in1),Integer.parseInt(in2));
+        double result = engine.compute(Integer.parseInt(in1), Integer.parseInt(in2));
         ((TextView) findViewById(R.id.output1)).setText("The answer is:");
         ((TextView) findViewById(R.id.output2)).setText("" + result);
     }
+
 }
